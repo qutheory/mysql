@@ -43,7 +43,7 @@ public struct MySQLDialect: SQLDialect {
     public func customDataType(for dataType: SQLDataType) -> SQLExpression? {
         switch dataType {
         case .text:
-            return SQLRaw("VARCHAR(255)")
+            return SQLRaw("TEXT")
         default:
             return nil
         }
